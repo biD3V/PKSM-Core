@@ -49,6 +49,7 @@
 #include "sav/SavRS.hpp"
 #include "sav/SavSUMO.hpp"
 #include "sav/SavSWSH.hpp"
+#include "sav/SavSV.hpp"
 #include "sav/SavUSUM.hpp"
 #include "sav/SavXY.hpp"
 #include "utils/crypto.hpp"
@@ -94,6 +95,8 @@ namespace pksm
             case SavSWSH::SIZE_G8SWSH_3B:
             case SavSWSH::SIZE_G8SWSH_3C:
                 return std::make_unique<SavSWSH>(dt, length);
+            case 0x319DC3:
+                return std::make_unique<SavSV>(dt,length);
             default:
                 return std::unique_ptr<Sav>(nullptr);
         }

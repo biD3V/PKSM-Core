@@ -61,6 +61,7 @@ namespace pksm
     class PK7;
     class PK8;
     class PB7;
+    class PK9;
 
     class PKX : public IPKFilterable
     {

@@ -34,6 +34,7 @@
 #include "pkx/PK6.hpp"
 #include "pkx/PK7.hpp"
 #include "pkx/PK8.hpp"
+#include "pkx/PK9.hpp"
 #include "pkx/PKFilter.hpp"
 #include "utils/endian.hpp"
 #include "utils/random.hpp"
@@ -546,6 +547,8 @@ namespace pksm
                 return getPKM<Generation::LGPE>(data, length, directAccess);
             case Generation::EIGHT:
                 return getPKM<Generation::EIGHT>(data, length, directAccess);
+            case Generation::NINE:
+                return getPKM<Generation::NINE>(data, length, directAccess);
             case Generation::UNUSED:
                 return nullptr;
         }
