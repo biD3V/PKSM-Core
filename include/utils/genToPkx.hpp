@@ -40,6 +40,7 @@ namespace pksm
     class PK7;
     class PK8;
     class PB7;
+    class PK9;
 
     template <pksm::Generation::EnumType g>
     struct GenToPkx
@@ -98,6 +99,12 @@ namespace pksm
     struct GenToPkx<pksm::Generation::LGPE>
     {
         using PKX = pksm::PB7;
+    };
+
+    template <>
+    struct GenToPkx<pksm::Generation::NINE>
+    {
+        using PKX = pksm::PK9;
     };
 }
 

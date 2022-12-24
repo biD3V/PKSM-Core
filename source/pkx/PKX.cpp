@@ -748,6 +748,9 @@ namespace pksm
                 case Generation::EIGHT:
                     partylen = PK8::PARTY_LENGTH;
                     break;
+                case Generation::NINE:
+                    partylen = PK9::PARTY_LENGTH;
+                    break;
                 default:
                     partylen = 0;
             }
