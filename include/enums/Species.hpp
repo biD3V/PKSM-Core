@@ -946,6 +946,118 @@ namespace pksm
                 Glastrier,
                 Spectrier,
                 Calyrex,
+                Wyrdeer,
+                Kleavor,
+                Ursaluna,
+                Basculegion,
+                Sneasler,
+                Overqwil,
+                Enamorus,
+                Sprigatito,
+                Floragato,
+                Meowscarada,
+                Fuecoco,
+                Crocalor,
+                Skeledirge,
+                Quaxly,
+                Quaxwell,
+                Quaquaval,
+                Lechonk,
+                Oinkologne,
+                Dudunsparce,
+                Tarountula,
+                Spidops,
+                Nymble,
+                Lokix,
+                Rellor,
+                Rabsca,
+                Greavard,
+                Houndstone,
+                Flittle,
+                Espathra,
+                Farigiraf,
+                Wiglett,
+                Wugtrio,
+                Dondozo,
+                Veluza,
+                Finizen,
+                Palafin,
+                Smoliv,
+                Dolliv,
+                Arboliva,
+                Capsakid,
+                Scovillain,
+                Tadbulb,
+                Bellibolt,
+                Varoom,
+                Revavroom,
+                Orthworm,
+                Tandemaus,
+                Maushold,
+                Cetoddle,
+                Cetitan,
+                Frigibax,
+                Arctibax,
+                Baxcalibur,
+                Tatsugiri,
+                Cyclizar,
+                Pawmi,
+                Pawmo,
+                Pawmot,
+                Wattrel,
+                Kilowattrel,
+                Bombirdier,
+                Squawkabilly,
+                Flamigo,
+                Klawf,
+                Nacli,
+                Naclstack,
+                Garganacl,
+                Glimmet,
+                Glimmora,
+                Shroodle,
+                Grafaiai,
+                Fidough,
+                Dachsbun,
+                Maschiff,
+                Mabosstiff,
+                Bramblin,
+                Brambleghast,
+                Gimmighoul,
+                Gholdengo,
+                GreatTusk,
+                BruteBonnet,
+                // Pikachu,
+                SandyShocks,
+                ScreamTail,
+                FlutterMane,
+                SlitherWing,
+                RoaringMoon,
+                IronTreads,
+                // Pikachu,
+                IronMoth,
+                IronHands,
+                IronJugulis,
+                IronThorns,
+                IronBundle,
+                IronValiant,
+                TingLu,
+                ChienPao,
+                WoChien,
+                ChiYu,
+                Koraidon,
+                Miraidon,
+                Tinkatink,
+                Tinkatuff,
+                Tinkaton,
+                Charcadet,
+                Armarouge,
+                Ceruledge,
+                Toedscool,
+                Toedscruel,
+                Kingambit,
+                Clodsire,
+                Annihilape,
 
                 INVALID [[maybe_unused]] =
                     std::numeric_limits<std::underlying_type_t<SpeciesEnum>>::max()
@@ -1905,6 +2017,118 @@ namespace pksm
         static constexpr internal::Species_impl Glastrier{EnumType::Glastrier};
         static constexpr internal::Species_impl Spectrier{EnumType::Spectrier};
         static constexpr internal::Species_impl Calyrex{EnumType::Calyrex};
+        static constexpr internal::Species_impl Wyrdeer{EnumType::Wyrdeer};
+        static constexpr internal::Species_impl Kleavor{EnumType::Kleavor};
+        static constexpr internal::Species_impl Ursaluna{EnumType::Ursaluna};
+        static constexpr internal::Species_impl Basculegion{EnumType::Basculegion};
+        static constexpr internal::Species_impl Sneasler{EnumType::Sneasler};
+        static constexpr internal::Species_impl Overqwil{EnumType::Overqwil};
+        static constexpr internal::Species_impl Enamorus{EnumType::Enamorus};
+        static constexpr internal::Species_impl Sprigatito{EnumType::Sprigatito};
+        static constexpr internal::Species_impl Floragato{EnumType::Floragato};
+        static constexpr internal::Species_impl Meowscarada{EnumType::Meowscarada};
+        static constexpr internal::Species_impl Fuecoco{EnumType::Fuecoco};
+        static constexpr internal::Species_impl Crocalor{EnumType::Crocalor};
+        static constexpr internal::Species_impl Skeledirge{EnumType::Skeledirge};
+        static constexpr internal::Species_impl Quaxly{EnumType::Quaxly};
+        static constexpr internal::Species_impl Quaxwell{EnumType::Quaxwell};
+        static constexpr internal::Species_impl Quaquaval{EnumType::Quaquaval};
+        static constexpr internal::Species_impl Lechonk{EnumType::Lechonk};
+        static constexpr internal::Species_impl Oinkologne{EnumType::Oinkologne};
+        static constexpr internal::Species_impl Dudunsparce{EnumType::Dudunsparce};
+        static constexpr internal::Species_impl Tarountula{EnumType::Tarountula};
+        static constexpr internal::Species_impl Spidops{EnumType::Spidops};
+        static constexpr internal::Species_impl Nymble{EnumType::Nymble};
+        static constexpr internal::Species_impl Lokix{EnumType::Lokix};
+        static constexpr internal::Species_impl Rellor{EnumType::Rellor};
+        static constexpr internal::Species_impl Rabsca{EnumType::Rabsca};
+        static constexpr internal::Species_impl Greavard{EnumType::Greavard};
+        static constexpr internal::Species_impl Houndstone{EnumType::Houndstone};
+        static constexpr internal::Species_impl Flittle{EnumType::Flittle};
+        static constexpr internal::Species_impl Espathra{EnumType::Espathra};
+        static constexpr internal::Species_impl Farigiraf{EnumType::Farigiraf};
+        static constexpr internal::Species_impl Wiglett{EnumType::Wiglett};
+        static constexpr internal::Species_impl Wugtrio{EnumType::Wugtrio};
+        static constexpr internal::Species_impl Dondozo{EnumType::Dondozo};
+        static constexpr internal::Species_impl Veluza{EnumType::Veluza};
+        static constexpr internal::Species_impl Finizen{EnumType::Finizen};
+        static constexpr internal::Species_impl Palafin{EnumType::Palafin};
+        static constexpr internal::Species_impl Smoliv{EnumType::Smoliv};
+        static constexpr internal::Species_impl Dolliv{EnumType::Dolliv};
+        static constexpr internal::Species_impl Arboliva{EnumType::Arboliva};
+        static constexpr internal::Species_impl Capsakid{EnumType::Capsakid};
+        static constexpr internal::Species_impl Scovillain{EnumType::Scovillain};
+        static constexpr internal::Species_impl Tadbulb{EnumType::Tadbulb};
+        static constexpr internal::Species_impl Bellibolt{EnumType::Bellibolt};
+        static constexpr internal::Species_impl Varoom{EnumType::Varoom};
+        static constexpr internal::Species_impl Revavroom{EnumType::Revavroom};
+        static constexpr internal::Species_impl Orthworm{EnumType::Orthworm};
+        static constexpr internal::Species_impl Tandemaus{EnumType::Tandemaus};
+        static constexpr internal::Species_impl Maushold{EnumType::Maushold};
+        static constexpr internal::Species_impl Cetoddle{EnumType::Cetoddle};
+        static constexpr internal::Species_impl Cetitan{EnumType::Cetitan};
+        static constexpr internal::Species_impl Frigibax{EnumType::Frigibax};
+        static constexpr internal::Species_impl Arctibax{EnumType::Arctibax};
+        static constexpr internal::Species_impl Baxcalibur{EnumType::Baxcalibur};
+        static constexpr internal::Species_impl Tatsugiri{EnumType::Tatsugiri};
+        static constexpr internal::Species_impl Cyclizar{EnumType::Cyclizar};
+        static constexpr internal::Species_impl Pawmi{EnumType::Pawmi};
+        static constexpr internal::Species_impl Pawmo{EnumType::Pawmo};
+        static constexpr internal::Species_impl Pawmot{EnumType::Pawmot};
+        static constexpr internal::Species_impl Wattrel{EnumType::Wattrel};
+        static constexpr internal::Species_impl Kilowattrel{EnumType::Kilowattrel};
+        static constexpr internal::Species_impl Bombirdier{EnumType::Bombirdier};
+        static constexpr internal::Species_impl Squawkabilly{EnumType::Squawkabilly};
+        static constexpr internal::Species_impl Flamigo{EnumType::Flamigo};
+        static constexpr internal::Species_impl Klawf{EnumType::Klawf};
+        static constexpr internal::Species_impl Nacli{EnumType::Nacli};
+        static constexpr internal::Species_impl Naclstack{EnumType::Naclstack};
+        static constexpr internal::Species_impl Garganacl{EnumType::Garganacl};
+        static constexpr internal::Species_impl Glimmet{EnumType::Glimmet};
+        static constexpr internal::Species_impl Glimmora{EnumType::Glimmora};
+        static constexpr internal::Species_impl Shroodle{EnumType::Shroodle};
+        static constexpr internal::Species_impl Grafaiai{EnumType::Grafaiai};
+        static constexpr internal::Species_impl Fidough{EnumType::Fidough};
+        static constexpr internal::Species_impl Dachsbun{EnumType::Dachsbun};
+        static constexpr internal::Species_impl Maschiff{EnumType::Maschiff};
+        static constexpr internal::Species_impl Mabosstiff{EnumType::Mabosstiff};
+        static constexpr internal::Species_impl Bramblin{EnumType::Bramblin};
+        static constexpr internal::Species_impl Brambleghast{EnumType::Brambleghast};
+        static constexpr internal::Species_impl Gimmighoul{EnumType::Gimmighoul};
+        static constexpr internal::Species_impl Gholdengo{EnumType::Gholdengo};
+        static constexpr internal::Species_impl GreatTusk{EnumType::GreatTusk};
+        static constexpr internal::Species_impl BruteBonnet{EnumType::BruteBonnet};
+        // static constexpr internal::Species_impl Pikachu{EnumType::Pikachu};
+        static constexpr internal::Species_impl SandyShocks{EnumType::SandyShocks};
+        static constexpr internal::Species_impl ScreamTail{EnumType::ScreamTail};
+        static constexpr internal::Species_impl FlutterMane{EnumType::FlutterMane};
+        static constexpr internal::Species_impl SlitherWing{EnumType::SlitherWing};
+        static constexpr internal::Species_impl RoaringMoon{EnumType::RoaringMoon};
+        static constexpr internal::Species_impl IronTreads{EnumType::IronTreads};
+        // static constexpr internal::Species_impl Pikachu{EnumType::Pikachu};
+        static constexpr internal::Species_impl IronMoth{EnumType::IronMoth};
+        static constexpr internal::Species_impl IronHands{EnumType::IronHands};
+        static constexpr internal::Species_impl IronJugulis{EnumType::IronJugulis};
+        static constexpr internal::Species_impl IronThorns{EnumType::IronThorns};
+        static constexpr internal::Species_impl IronBundle{EnumType::IronBundle};
+        static constexpr internal::Species_impl IronValiant{EnumType::IronValiant};
+        static constexpr internal::Species_impl TingLu{EnumType::TingLu};
+        static constexpr internal::Species_impl ChienPao{EnumType::ChienPao};
+        static constexpr internal::Species_impl WoChien{EnumType::WoChien};
+        static constexpr internal::Species_impl ChiYu{EnumType::ChiYu};
+        static constexpr internal::Species_impl Koraidon{EnumType::Koraidon};
+        static constexpr internal::Species_impl Miraidon{EnumType::Miraidon};
+        static constexpr internal::Species_impl Tinkatink{EnumType::Tinkatink};
+        static constexpr internal::Species_impl Tinkatuff{EnumType::Tinkatuff};
+        static constexpr internal::Species_impl Tinkaton{EnumType::Tinkaton};
+        static constexpr internal::Species_impl Charcadet{EnumType::Charcadet};
+        static constexpr internal::Species_impl Armarouge{EnumType::Armarouge};
+        static constexpr internal::Species_impl Ceruledge{EnumType::Ceruledge};
+        static constexpr internal::Species_impl Toedscool{EnumType::Toedscool};
+        static constexpr internal::Species_impl Toedscruel{EnumType::Toedscruel};
+        static constexpr internal::Species_impl Kingambit{EnumType::Kingambit};
+        static constexpr internal::Species_impl Clodsire{EnumType::Clodsire};
+        static constexpr internal::Species_impl Annihilape{EnumType::Annihilape};
 
         static constexpr internal::Species_impl INVALID{EnumType::INVALID};
     };
