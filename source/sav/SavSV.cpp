@@ -271,12 +271,12 @@ namespace pksm
 
     u32 SavSV::BP(void) const
     {
-        return LittleEndian::convertTo<u32>(getBlock(LP)->decryptedData() + 4);
+        return LittleEndian::convertTo<u32>(getBlock(LP)->decryptedData());
     }
 
     void SavSV::BP(u32 v)
     {
-        LittleEndian::convertFrom<u32>(getBlock(LP)->decryptedData() + 4, v);
+        LittleEndian::convertFrom<u32>(getBlock(LP)->decryptedData(), v);
     }
 
     u8 SavSV::badges(void) const
@@ -296,22 +296,22 @@ namespace pksm
 
     u8 SavSV::playedMinutes(void) const
     {
-        return getBlock(PlayTime)->decryptedData()[2];
+        return getBlock(PlayTime)->decryptedData()[4];
     }
 
     void SavSV::playedMinutes(u8 v)
     {
-        getBlock(PlayTime)->decryptedData()[2] = v;
+        getBlock(PlayTime)->decryptedData()[4] = v;
     }
 
     u8 SavSV::playedSeconds(void) const
     {
-        return getBlock(PlayTime)->decryptedData()[3];
+        return getBlock(PlayTime)->decryptedData()[8];
     }
 
     void SavSV::playedSeconds(u8 v)
     {
-        getBlock(PlayTime)->decryptedData()[3] = v;
+        getBlock(PlayTime)->decryptedData()[8] = v;
     }
 
     void SavSV::item(const Item& item, Pouch pouch, u16 slot)
