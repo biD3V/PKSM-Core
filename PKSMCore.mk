@@ -1,5 +1,4 @@
-mkfile_path	:=	$(abspath $(lastword $(MAKEFILE_LIST)))
-current_dir	:=	$(SVEDIT_PATH)/$(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
+current_dir	:=	$(PKSM_PATH)
 
 SOURCES		:=	$(SOURCES) \
 				$(current_dir)/source \
@@ -20,7 +19,3 @@ INCLUDES	:=	$(INCLUDES) \
 				$(current_dir)/include/utils \
 				$(current_dir)/include/wcx \
 				$(current_dir)/memecrypto
-
-
-# format:
-# 	clang-format -i -style=file $(foreach dir,$(SOURCES),$(wildcard $(dir)/*.c) $(wildcard $(dir)/*.cpp) $(wildcard $(dir)/*.hpp) $(wildcard $(dir)/*.h)) $(foreach dir,$(INCLUDES),$(wildcard $(dir)/*.h) $(wildcard $(dir)/*.hpp))
