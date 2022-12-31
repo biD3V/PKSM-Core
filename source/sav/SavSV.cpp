@@ -675,7 +675,7 @@ namespace pksm
                 }
 
                 pk8->canGiga(wc8.canGigantamax());
-                pk8->dynamaxLevel(wc8.dynamaxLevel());
+                //pk8->dynamaxLevel(wc8.dynamaxLevel());
 
                 pk8->metLocation(wc8.metLocation());
                 pk8->eggLocation(wc8.eggLocation());

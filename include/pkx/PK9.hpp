@@ -141,6 +141,8 @@ namespace pksm
         void height(u8 v);
         u8 weight(void) const;
         void weight(u8 v);
+        u8 scale(void) const;
+        void scale(u8 v);
 
         std::string nickname(void) const override;
         void nickname(const std::string_view& v) override;
@@ -156,13 +158,15 @@ namespace pksm
         void partyCurrHP(u16 v) override;
         u8 iv(Stat iv) const override;
         void iv(Stat iv, u8 v) override;
-        u8 dynamaxLevel(void) const;
-        void dynamaxLevel(u8 v);
 
         bool egg(void) const override;
         void egg(bool v) override;
         bool nicknamed(void) const override;
         void nicknamed(bool v) override;
+        Type teraTypeOriginal(void) const;
+        void teraTypeOriginal(Type v);
+        Type teraTypeOverride(void) const;
+        void teraTypeOverride(Type v);
 
         std::string htName(void) const;
         void htName(const std::string_view& v);

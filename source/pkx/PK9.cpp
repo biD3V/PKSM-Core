@@ -641,22 +641,32 @@ namespace pksm
 
     u8 PK9::height(void) const
     {
-        return data[0x50];
+        return data[0x48];
     }
 
     void PK9::height(u8 v)
     {
-        data[0x50] = v;
+        data[0x48] = v;
     }
 
     u8 PK9::weight(void) const
     {
-        return data[0x51];
+        return data[0x49];
     }
 
     void PK9::weight(u8 v)
     {
-        data[0x51] = v;
+        data[0x49] = v;
+    }
+
+    u8 PK9::scale(void) const
+    {
+        return data[0x4A];
+    }
+
+    void PK9::scale(u8 v)
+    {
+        data[0x4A] = v;
     }
 
     std::string PK9::nickname(void) const
@@ -756,14 +766,24 @@ namespace pksm
             (LittleEndian::convertTo<u32>(data + 0x8C) & 0x7FFFFFFF) | (v ? 0x80000000 : 0));
     }
 
-    u8 PK9::dynamaxLevel(void) const
+    Type PK9::teraTypeOriginal(void) const
     {
-        return data[0x90];
+        return Type{data[0x94]};
     }
 
-    void PK9::dynamaxLevel(u8 v)
+    void PK9::teraTypeOriginal(Type v)
     {
-        data[0x90] = v;
+        data[0x94] = u8(v);
+    }
+
+    Type PK9::teraTypeOverride(void) const
+    {
+        return Type{data[0x95]};
+    }
+
+    void PK9::teraTypeOverride(Type v)
+    {
+        data[0x95] = u8(v);
     }
 
     std::string PK9::htName(void) const
