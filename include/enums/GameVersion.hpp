@@ -118,6 +118,10 @@ namespace pksm
                 SW = 44,
                 /// Pokémon Shield (NX)
                 SH = 45,
+                /// Pokémon Scarlet (NX)
+                SL = 50,
+                /// Pokémon Violet (NX)
+                VL = 51,
 
                 INVALID [[maybe_unused]] =
                     std::numeric_limits<std::underlying_type_t<GameVersionEnum>>::max()
@@ -175,6 +179,9 @@ namespace pksm
                     case GameVersionEnum::SW: // 44:
                     case GameVersionEnum::SH: // 45:
                         return Generation::EIGHT;
+                    case GameVersionEnum::SL: // 50:
+                    case GameVersionEnum::VL: // 51:
+                        return Generation::NINE;
                     case GameVersionEnum::RD: // 35:
                     case GameVersionEnum::GN: // 36:
                     case GameVersionEnum::BU: // 37:

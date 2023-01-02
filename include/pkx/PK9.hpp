@@ -49,6 +49,8 @@ namespace pksm
         void metMonth(int v) override;
         [[nodiscard]] int metDay(void) const override;
         void metDay(int v) override;
+        static constexpr u8 teraOverrideNone = 19;
+        static constexpr Type fallbackType = Type::Normal;
 
     protected:
         static constexpr u16 hyperTrainLookup[6] = {0, 1, 2, 5, 3, 4};
@@ -56,7 +58,8 @@ namespace pksm
     public:
         static constexpr size_t BOX_LENGTH            = 0x148;
         static constexpr size_t PARTY_LENGTH          = 0x158;
-        static constexpr Species FORMAT_SPECIES_LIMIT = Species::Zarude;
+        static constexpr Species FORMAT_SPECIES_LIMIT = Species::Annihilape;
+        static constexpr Type FORMAT_TYPE_LIMIT       = Type::Fairy;
 
         PK9(PrivateConstructor, u8* dt, bool party = false, bool directAccess = false);
 
@@ -167,6 +170,8 @@ namespace pksm
         void teraTypeOriginal(Type v);
         Type teraTypeOverride(void) const;
         void teraTypeOverride(Type v);
+        Type getTeraType(void) const;
+        void setTeraType(Type v);
 
         std::string htName(void) const;
         void htName(const std::string_view& v);
@@ -272,51 +277,47 @@ namespace pksm
         void shiny(bool v) override;
         u16 formSpecies(void) const override;
 
-        inline u8 baseHP(void) const override { return PersonalSWSH::baseHP(formSpecies()); }
+        inline u8 baseHP(void) const override { return PersonalSV::baseHP(formSpecies()); }
 
-        inline u8 baseAtk(void) const override { return PersonalSWSH::baseAtk(formSpecies()); }
+        inline u8 baseAtk(void) const override { return PersonalSV::baseAtk(formSpecies()); }
 
-        inline u8 baseDef(void) const override { return PersonalSWSH::baseDef(formSpecies()); }
+        inline u8 baseDef(void) const override { return PersonalSV::baseDef(formSpecies()); }
 
-        inline u8 baseSpe(void) const override { return PersonalSWSH::baseSpe(formSpecies()); }
+        inline u8 baseSpe(void) const override { return PersonalSV::baseSpe(formSpecies()); }
 
-        inline u8 baseSpa(void) const override { return PersonalSWSH::baseSpa(formSpecies()); }
+        inline u8 baseSpa(void) const override { return PersonalSV::baseSpa(formSpecies()); }
 
-        inline u8 baseSpd(void) const override { return PersonalSWSH::baseSpd(formSpecies()); }
+        inline u8 baseSpd(void) const override { return PersonalSV::baseSpd(formSpecies()); }
 
-        inline Type type1(void) const override { return PersonalSWSH::type1(formSpecies()); }
+        inline Type type1(void) const override { return PersonalSV::type1(formSpecies()); }
 
-        inline Type type2(void) const override { return PersonalSWSH::type2(formSpecies()); }
+        inline Type type2(void) const override { return PersonalSV::type2(formSpecies()); }
 
-        inline u8 genderType(void) const override { return PersonalSWSH::gender(formSpecies()); }
+        inline u8 genderType(void) const override { return PersonalSV::gender(formSpecies()); }
 
         inline u8 baseFriendship(void) const override
         {
-            return PersonalSWSH::baseFriendship(formSpecies());
+            return PersonalSV::baseFriendship(formSpecies());
         }
 
-        inline u8 expType(void) const override { return PersonalSWSH::expType(formSpecies()); }
+        inline u8 expType(void) const override { return PersonalSV::expType(formSpecies()); }
 
         inline Ability abilities(u8 n) const override
         {
-            return PersonalSWSH::ability(formSpecies(), n);
+            return PersonalSV::ability(formSpecies(), n);
         }
 
         inline u16 formStatIndex(void) const override
         {
-            return PersonalSWSH::formStatIndex(formSpecies());
+            return PersonalSV::formStatIndex(formSpecies());
         }
 
-        inline u16 pokedexIndex(void) const { return PersonalSWSH::pokedexIndex(formSpecies()); }
+        inline u16 pokedexIndex(void) const { return PersonalSV::pokedexIndex(formSpecies()); }
 
-        inline u16 armordexIndex(void) const { return PersonalSWSH::armordexIndex(formSpecies()); }
-
-        inline u16 crowndexIndex(void) const { return PersonalSWSH::crowndexIndex(formSpecies()); }
-
-        inline bool canLearnTR(u8 trID) const
-        {
-            return PersonalSWSH::canLearnTR(formSpecies(), trID);
-        }
+        // inline bool canLearnTR(u8 trID) const
+        // {
+        //     return PersonalSV::canLearnTR(formSpecies(), trID);
+        // }
 
     private:
         u16 statImpl(Stat stat) const override;

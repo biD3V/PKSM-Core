@@ -31,6 +31,7 @@
 #include "personal_lgpe.h"
 #include "personal_rsfrlge.h"
 #include "personal_smusum.h"
+#include "personal_sv.h"
 #include "personal_swsh.h"
 #include "personal_xyoras.h"
 #include "personal_y.h"
@@ -537,6 +538,88 @@ namespace pksm
                      : false;
         }
     }
+    
+    namespace PersonalSV
+    {
+        u8 baseHP(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x0];
+        }
+
+        u8 baseAtk(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x1];
+        }
+
+        u8 baseDef(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x2];
+        }
+
+        u8 baseSpe(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x3];
+        }
+
+        u8 baseSpa(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x4];
+        }
+
+        u8 baseSpd(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x5];
+        }
+
+        Type type1(u16 species)
+        {
+            return Type{personal_sv[species * personal_sv_entrysize + 0x6]};
+        }
+
+        Type type2(u16 species)
+        {
+            return Type{personal_sv[species * personal_sv_entrysize + 0x7]};
+        }
+
+        u8 gender(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0xB];
+        }
+
+        u8 baseFriendship(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0xE];
+        }
+
+        u8 expType(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0xF];
+        }
+
+        u8 formCount(u16 species)
+        {
+            return personal_sv[species * personal_sv_entrysize + 0x1A];
+        }
+
+        Ability ability(u16 species, u8 n)
+        {
+            return Ability{LittleEndian::convertTo<u16>(
+                personal_sv + species * personal_sv_entrysize + 0x12 + 2 * n)};
+        }
+
+        u16 formStatIndex(u16 species)
+        {
+            return LittleEndian::convertTo<u16>(
+                personal_sv + species * personal_sv_entrysize + 0x18);
+        }
+
+        u16 pokedexIndex(u16 species)
+        {
+            return LittleEndian::convertTo<u16>(
+                personal_sv + species * personal_sv_entrysize + 0x1E);
+        }
+    } // namespace PersonalSV
+    
 
     namespace PersonalRSFRLGE
     {

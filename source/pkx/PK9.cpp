@@ -786,6 +786,30 @@ namespace pksm
         data[0x95] = u8(v);
     }
 
+    Type PK9::getTeraType(void) const
+    {
+        if (teraTypeOverride() <= FORMAT_TYPE_LIMIT)
+            return teraTypeOverride();
+        if (u8(teraTypeOverride()) != teraOverrideNone)
+            return fallbackType;
+        
+        if (teraTypeOriginal() <= FORMAT_TYPE_LIMIT)
+            return teraTypeOriginal();
+        
+        return fallbackType;
+    }
+
+    void PK9::setTeraType(Type v)
+    {
+        if (v > FORMAT_TYPE_LIMIT)
+            v = fallbackType;
+        
+        if (teraTypeOriginal() == v)
+            teraTypeOverride(static_cast<pksm::Type>(teraOverrideNone));
+        else
+            teraTypeOverride(v);
+    }
+
     std::string PK9::htName(void) const
     {
         return StringUtils::transString67(StringUtils::getString(data, 0xA8, 13));
@@ -1336,12 +1360,12 @@ namespace pksm
     {
         u16 tmpSpecies = u16(species());
         u8 form        = alternativeForm();
-        u8 formcount   = PersonalSWSH::formCount(tmpSpecies);
+        u8 formcount   = PersonalSV::formCount(tmpSpecies);
 
         if (form && form < formcount)
         {
             u16 backSpecies = tmpSpecies;
-            tmpSpecies      = PersonalSWSH::formStatIndex(tmpSpecies);
+            tmpSpecies      = PersonalSV::formStatIndex(tmpSpecies);
             if (!tmpSpecies)
             {
                 tmpSpecies = backSpecies;

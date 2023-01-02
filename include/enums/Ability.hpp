@@ -315,6 +315,37 @@ namespace pksm
                 GrimNeigh,
                 AsOneI,
                 AsOneG,
+                LingeringAroma,
+                SeedSower,
+                ThermalExchange,
+                AngerShell,
+                PurifyingSalt,
+                WellBakedBody,
+                WindRider,
+                GuardDog,
+                RockyPayload,
+                WindPower,
+                ZerotoHero,
+                Commander,
+                Electromorphosis,
+                Protosynthesis,
+                QuarkDrive,
+                GoodasGold,
+                VesselofRuin,
+                SwordofRuin,
+                TabletsofRuin,
+                BeadsofRuin,
+                OrichalcumPulse,
+                HadronEngine,
+                Opportunist,
+                CudChew,
+                Sharpness,
+                SupremeOverlord,
+                Costar,
+                ToxicDebris,
+                ArmorTail,
+                EarthEater,
+                MyceliumMight,
 
                 INVALID [[maybe_unused]] =
                     std::numeric_limits<std::underlying_type_t<AbilityEnum>>::max()
@@ -643,6 +674,37 @@ namespace pksm
         static constexpr internal::Ability_impl GrimNeigh{EnumType::GrimNeigh};
         static constexpr internal::Ability_impl AsOneI{EnumType::AsOneI};
         static constexpr internal::Ability_impl AsOneG{EnumType::AsOneG};
+        static constexpr internal::Ability_impl LingeringAroma{EnumType::LingeringAroma};
+        static constexpr internal::Ability_impl SeedSower{EnumType::SeedSower};
+        static constexpr internal::Ability_impl ThermalExchange{EnumType::ThermalExchange};
+        static constexpr internal::Ability_impl AngerShell{EnumType::AngerShell};
+        static constexpr internal::Ability_impl PurifyingSalt{EnumType::PurifyingSalt};
+        static constexpr internal::Ability_impl WellBakedBody{EnumType::WellBakedBody};
+        static constexpr internal::Ability_impl WindRider{EnumType::WindRider};
+        static constexpr internal::Ability_impl GuardDog{EnumType::GuardDog};
+        static constexpr internal::Ability_impl RockyPayload{EnumType::RockyPayload};
+        static constexpr internal::Ability_impl WindPower{EnumType::WindPower};
+        static constexpr internal::Ability_impl ZerotoHero{EnumType::ZerotoHero};
+        static constexpr internal::Ability_impl Commander{EnumType::Commander};
+        static constexpr internal::Ability_impl Electromorphosis{EnumType::Electromorphosis};
+        static constexpr internal::Ability_impl Protosynthesis{EnumType::Protosynthesis};
+        static constexpr internal::Ability_impl QuarkDrive{EnumType::QuarkDrive};
+        static constexpr internal::Ability_impl GoodasGold{EnumType::GoodasGold};
+        static constexpr internal::Ability_impl VesselofRuin{EnumType::VesselofRuin};
+        static constexpr internal::Ability_impl SwordofRuin{EnumType::SwordofRuin};
+        static constexpr internal::Ability_impl TabletsofRuin{EnumType::TabletsofRuin};
+        static constexpr internal::Ability_impl BeadsofRuin{EnumType::BeadsofRuin};
+        static constexpr internal::Ability_impl OrichalcumPulse{EnumType::OrichalcumPulse};
+        static constexpr internal::Ability_impl HadronEngine{EnumType::HadronEngine};
+        static constexpr internal::Ability_impl Opportunist{EnumType::Opportunist};
+        static constexpr internal::Ability_impl CudChew{EnumType::CudChew};
+        static constexpr internal::Ability_impl Sharpness{EnumType::Sharpness};
+        static constexpr internal::Ability_impl SupremeOverlord{EnumType::SupremeOverlord};
+        static constexpr internal::Ability_impl Costar{EnumType::Costar};
+        static constexpr internal::Ability_impl ToxicDebris{EnumType::ToxicDebris};
+        static constexpr internal::Ability_impl ArmorTail{EnumType::ArmorTail};
+        static constexpr internal::Ability_impl EarthEater{EnumType::EarthEater};
+        static constexpr internal::Ability_impl MyceliumMight{EnumType::MyceliumMight};
 
         static constexpr internal::Ability_impl INVALID{EnumType::INVALID};
     };
