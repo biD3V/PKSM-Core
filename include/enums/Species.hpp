@@ -1027,14 +1027,14 @@ namespace pksm
                 Gholdengo,
                 GreatTusk,
                 BruteBonnet,
-                Pikachu0, // Placeholder?
+                AKETUBAN,
                 SandyShocks,
                 ScreamTail,
                 FlutterMane,
                 SlitherWing,
                 RoaringMoon,
                 IronTreads,
-                Pikachu1, // Placeholder?
+                BKETUBAN,
                 IronMoth,
                 IronHands,
                 IronJugulis,
@@ -2098,14 +2098,14 @@ namespace pksm
         static constexpr internal::Species_impl Gholdengo{EnumType::Gholdengo};
         static constexpr internal::Species_impl GreatTusk{EnumType::GreatTusk};
         static constexpr internal::Species_impl BruteBonnet{EnumType::BruteBonnet};
-        static constexpr internal::Species_impl Pikachu0{EnumType::Pikachu0};
+        static constexpr internal::Species_impl AKETUBAN{EnumType::AKETUBAN};
         static constexpr internal::Species_impl SandyShocks{EnumType::SandyShocks};
         static constexpr internal::Species_impl ScreamTail{EnumType::ScreamTail};
         static constexpr internal::Species_impl FlutterMane{EnumType::FlutterMane};
         static constexpr internal::Species_impl SlitherWing{EnumType::SlitherWing};
         static constexpr internal::Species_impl RoaringMoon{EnumType::RoaringMoon};
         static constexpr internal::Species_impl IronTreads{EnumType::IronTreads};
-        static constexpr internal::Species_impl Pikachu1{EnumType::Pikachu1};
+        static constexpr internal::Species_impl BKETUBAN{EnumType::BKETUBAN};
         static constexpr internal::Species_impl IronMoth{EnumType::IronMoth};
         static constexpr internal::Species_impl IronHands{EnumType::IronHands};
         static constexpr internal::Species_impl IronJugulis{EnumType::IronJugulis};

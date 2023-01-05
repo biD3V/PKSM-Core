@@ -265,6 +265,8 @@ namespace pksm
                     return GameVersion::SH;
                 case Generation::LGPE:
                     return GameVersion::GE;
+                case Generation::NINE:
+                    return GameVersion::VL;
                 default:
                     return GameVersion::INVALID;
             }
@@ -292,6 +294,8 @@ namespace pksm
                     return GameVersion::SW;
                 case Generation::LGPE:
                     return GameVersion::GP;
+                case Generation::NINE:
+                    return GameVersion::SL;
                 default:
                     return GameVersion::INVALID;
             }
@@ -371,6 +375,10 @@ namespace pksm
         static constexpr internal::GameVersion_impl SW{EnumType::SW};
         /// Pokémon Shield (NX)
         static constexpr internal::GameVersion_impl SH{EnumType::SH};
+        /// Pokémon Scarlet (NX)
+        static constexpr internal::GameVersion_impl SL{EnumType::SL};
+        /// Pokémon Violet (NX)
+        static constexpr internal::GameVersion_impl VL{EnumType::VL};
 
         static constexpr internal::GameVersion_impl INVALID{EnumType::INVALID};
     };

@@ -383,6 +383,13 @@ namespace pksm
                     []() { return create_set_consecutive<Move>(Move::None, Move::EerieSpell); });
                 return items;
             }
+            case GameVersion::SL:
+            case GameVersion::VL:
+            {
+                static const std::set<Move> items = std::invoke(
+                    []() { return create_set_consecutive<Move>(Move::None, Move::MagicalTorque); });
+                return items;
+            }
             default:
                 return emptySet;
         }
@@ -787,6 +794,13 @@ namespace pksm
             {
                 static const std::set<Ability> items = std::invoke([]()
                     { return create_set_consecutive<Ability>(Ability::Stench, Ability::AsOneG); });
+                return items;
+            }
+            case GameVersion::SL:
+            case GameVersion::VL:
+            {
+                static const std::set<Ability> items = std::invoke([]()
+                    { return create_set_consecutive<Ability>(Ability::Stench, Ability::MyceliumMight); });
                 return items;
             }
             default:

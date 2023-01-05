@@ -613,6 +613,11 @@ namespace pksm
                 personal_sv + species * personal_sv_entrysize + 0x18);
         }
 
+        bool isPresentInGame(u16 formSpecies)
+        {
+            return personal_sv[formSpecies * personal_sv_entrysize + 0x1C] != 0 ? true : false;
+        }
+
         u16 pokedexIndex(u16 species)
         {
             return LittleEndian::convertTo<u16>(

@@ -226,8 +226,8 @@ namespace pksm
         [[nodiscard]] Ability ability(u16 formSpecies, u8 n);
         [[nodiscard]] u16 formStatIndex(u16 formSpecies);
         [[nodiscard]] u8 formCount(u16 formSpecies);
+        [[nodiscard]] bool isPresentInGame(u16 formSpecies);
         [[nodiscard]] u16 pokedexIndex(u16 formSpecies);
-        [[nodiscard]] bool canLearnTR(u16 formSpecies, u8 trID);
     }
 }
 
